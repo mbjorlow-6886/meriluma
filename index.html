@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="no">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MeriLuma – Yoga, meditasjon og sjelskort</title>
+    <meta name="description" content="MeriLuma – myke meditasjoner, sjelskort og yogestunder av Marianne Bjørløw. Pust, nærvær og varme i et klart, enkelt uttrykk." />
+
+    <!-- Open Graph for nice link previews -->
+    <meta property="og:title" content="MeriLuma" />
+    <meta property="og:description" content="Meditasjoner, sjelskort og yoga – i et varmt, klart uttrykk." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/og-image.jpg" />
+
+    <!-- Tailwind (CDN for enkel start) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      /* En liten, myk gradient som bakgrunn */
+      :root { color-scheme: light; }
+      body { background: radial-gradient(1100px 600px at 20% -10%, #fff7f8 0%, transparent 50%),
+                           radial-gradient(1200px 700px at 100% 10%, #f0fff7 0%, transparent 55%),
+                           radial-gradient(900px 600px at 60% 120%, #f7f5ff 0%, transparent 60%);
+             min-height: 100dvh; }
+      /* En liten gullglans for logoikonet */
+      .gold { background: linear-gradient(135deg, #d9b06b, #f2e7c9 35%, #e2c37a 60%, #f8f1dc); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    </style>
+  </head>
+  <body class="text-slate-800 antialiased">
+    <!-- Nav -->
+    <header class="max-w-6xl mx-auto px-4 py-6 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3 group" aria-label="MeriLuma hjem">
+        <div class="text-3xl gold font-semibold tracking-tight">∞</div>
+        <span class="text-xl font-medium tracking-tight">MeriLuma</span>
+      </a>
+      <nav class="hidden sm:flex gap-6 text-sm">
+        <a href="#tjenester" class="hover:underline">Tjenester</a>
+        <a href="#kort" class="hover:underline">Kort</a>
+        <a href="#meditasjon" class="hover:underline">Meditasjon</a>
+        <a href="#kontakt" class="hover:underline">Kontakt</a>
+      </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="max-w-6xl mx-auto px-4 py-14 md:py-20 grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <h1 class="text-4xl md:text-5xl leading-tight font-semibold">
+          Varme, klarhet og ro
+          <span class="block text-slate-500 text-xl md:text-2xl mt-3 font-normal">MeriLuma – yoga, meditasjon og sjelskort</span>
+        </h1>
+        <p class="mt-6 text-base md:text-lg text-slate-600 max-w-prose">
+          Jeg skaper myke praksiser og visuelle kort som hjelper deg å lande i kroppen, lytte til hjertet og finne retning.
+          Pust, nærvær og konkrete verktøy – enkelt og ekte.
+        </p>
+        <div class="mt-8 flex gap-3">
+          <a href="#meditasjon" class="px-5 py-3 rounded-2xl shadow hover:shadow-md transition border border-slate-300 bg-white">Lytt til en meditasjon</a>
+          <a href="#kontakt" class="px-5 py-3 rounded-2xl shadow hover:shadow-md transition bg-slate-900 text-white">Book en samtale</a>
+        </div>
+      </div>
+      <div class="relative">
+        <div class="aspect-[4/3] rounded-3xl shadow-lg bg-white/70 backdrop-blur flex items-center justify-center p-10">
+          <div class="text-center">
+            <div class="text-6xl gold">∞</div>
+            <p class="mt-4 text-slate-500">Plassholder for logo/bilde</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tjenester -->
+    <section id="tjenester" class="max-w-6xl mx-auto px-4 py-12">
+      <h2 class="text-2xl md:text-3xl font-semibold">Hva jeg tilbyr</h2>
+      <div class="mt-6 grid md:grid-cols-3 gap-6">
+        <article class="p-6 rounded-3xl bg-white/70 backdrop-blur border border-slate-200 shadow-sm">
+          <h3 class="text-lg font-semibold">1:1 veiledning</h3>
+          <p class="mt-2 text-sm text-slate-600">Skreddersydde meditasjoner og myk yoga tilpasset dine behov – i studio eller digitalt.</p>
+        </article>
+        <article class="p-6 rounded-3xl bg-white/70 backdrop-blur border border-slate-200 shadow-sm">
+          <h3 class="text-lg font-semibold">MeriLuma-kort</h3>
+          <p class="mt-2 text-sm text-slate-600">A6-kort med mudra, mantra og symboler. Vakker, tydelig design – laget for praksis.</p>
+        </article>
+        <article class="p-6 rounded-3xl bg-white/70 backdrop-blur border border-slate-200 shadow-sm">
+          <h3 class="text-lg font-semibold">Lydmeditasjoner</h3>
+          <p class="mt-2 text-sm text-slate-600">Rolige, guidede spor som kan brukes hjemme. Fokus på pust, nervesystem og indre ro.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Kort / Galleri -->
+    <section id="kort" class="max-w-6xl mx-auto px-4 py-12">
+      <h2 class="text-2xl md:text-3xl font-semibold">MeriLuma-kort</h2>
+      <p class="mt-2 text-slate-600">Et lite utvalg – erstatt gjerne med dine egne bilder senere.</p>
+      <div class="mt-6 grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div class="rounded-3xl bg-white/70 border border-slate-200 shadow-sm aspect-[3/4]"></div>
+        <div class="rounded-3xl bg-white/70 border border-slate-200 shadow-sm aspect-[3/4]"></div>
+        <div class="rounded-3xl bg-white/70 border border-slate-200 shadow-sm aspect-[3/4]"></div>
+      </div>
+    </section>
+
+    <!-- Meditasjon / Lytt -->
+    <section id="meditasjon" class="max-w-6xl mx-auto px-4 py-12">
+      <h2 class="text-2xl md:text-3xl font-semibold">Lytt</h2>
+      <p class="mt-2 text-slate-600">Legg inn lenker til Spotify / YouTube når du er klar.</p>
+      <div class="mt-6 rounded-3xl bg-white/70 backdrop-blur border border-slate-200 shadow-sm p-6">
+        <p class="text-slate-700">Her kan du legge inn en innebygd lydspiller (Spotify-embed) eller en knapp som åpner din favorittplattform.</p>
+        <div class="mt-4">
+          <a href="#" class="inline-flex items-center px-5 py-3 rounded-2xl shadow hover:shadow-md transition bg-slate-900 text-white">Åpne meditasjoner</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Kontakt -->
+    <section id="kontakt" class="max-w-6xl mx-auto px-4 py-12">
+      <h2 class="text-2xl md:text-3xl font-semibold">Kontakt</h2>
+      <p class="mt-2 text-slate-600">Send gjerne en e‑post, så finner vi en tid.</p>
+      <div class="mt-4">
+        <a class="text-slate-800 underline decoration-2 underline-offset-4" href="mailto:hei@meriluma.no">hei@meriluma.no</a>
+      </div>
+    </section>
+
+    <footer class="max-w-6xl mx-auto px-4 py-10 text-sm text-slate-500">
+      <div class="border-t border-slate-200 pt-6 flex flex-col sm:flex-row gap-3 sm:items-center sm:justify-between">
+        <p>© <span id="year"></span> MeriLuma – Marianne Bjørløw</p>
+        <nav class="flex gap-5">
+          <a href="#" class="hover:underline">Personvern</a>
+          <a href="#" class="hover:underline">Cookies</a>
+          <a href="#kontakt" class="hover:underline">Kontakt</a>
+        </nav>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
