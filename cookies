@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="no">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cookies – MeriLuma</title>
+  <meta name="description" content="Informasjon om bruk av informasjonskapsler (cookies) på MeriLuma.no">
+  <meta name="robots" content="noindex,nofollow">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="msapplication-config" content="/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+  <style>
+    :root { --accent:#f7a07a; --fg:#222; --bg:#fff; --muted:#666; }
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif; margin:0; color:var(--fg); background:var(--bg);}
+    header{padding:24px 20px; border-bottom:1px solid #eee;}
+    .wrap{max-width:960px; margin:0 auto; padding:0 20px;}
+    nav a{margin-right:16px; text-decoration:none; color:var(--muted);}
+    nav a.active{color:var(--fg); font-weight:600;}
+    h1{font-size:32px; margin:24px 0 8px}
+    h2{font-size:20px; margin:24px 0 8px}
+    main{padding:28px 0 60px;}
+    table{border-collapse:collapse; width:100%; margin:12px 0 24px}
+    th,td{border:1px solid #eee; padding:8px; text-align:left; font-size:14px}
+    th{background:#fafafa}
+    .tag{display:inline-block; background:#fff3ed; color:#b6532d; padding:6px 10px; border-radius:999px; font-size:12px; margin-bottom:12px;}
+    footer{border-top:1px solid #eee; padding:20px 0; color:var(--muted); font-size:14px;}
+    footer a{color:var(--muted); text-decoration:none; margin-right:10px;}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <nav>
+        <a href="/">Forside</a>
+        <a href="/personvern.html">Personvern</a>
+        <a href="/disclaimer.html">Ansvarsfraskrivelse</a>
+        <a href="/vilkar.html">Vilkår</a>
+        <a href="/cookies.html" class="active">Cookies</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <span class="tag">Utkast – skjult inntil videre</span>
+    <h1>Informasjonskapsler (cookies)</h1>
+    <p>Vi bruker informasjonskapsler for grunnleggende funksjonalitet og anonym statistikk. Du kan styre og slette cookies i nettleseren din.</p>
+
+    <h2>Typer cookies vi kan bruke</h2>
+    <table>
+      <thead>
+        <tr><th>Navn</th><th>Formål</th><th>Type</th><th>Lagringstid</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>_vercel_no_cache (eksempel)</td><td>Teknisk ytelse/hosting</td><td>Nødvendig</td><td>Økt</td></tr>
+        <tr><td>pref_lang (eksempel)</td><td>Husker språkvalg</td><td>Funksjonell</td><td>12 mnd</td></tr>
+        <tr><td>_ga (hvis aktivert)</td><td>Google Analytics – anonym trafikkmåling</td><td>Statistikk</td><td>2 år</td></tr>
+      </tbody>
+    </table>
+
+    <p>Når vi tar i bruk nye tjenester (f.eks. analyse, innebygging av Spotify/YouTube), vil listen over cookies oppdateres. Ikke-nødvendige cookies settes først etter samtykke.</p>
+
+    <h2>Hvordan kontrollere cookies</h2>
+    <p>Du kan blokkere eller slette cookies i nettleseren. Se hjelpesidene for din nettleser for instruksjoner. Merk at blokkering av nødvendige cookies kan påvirke funksjonalitet.</p>
+
+    <h2>Kontakt</h2>
+    <p>Spørsmål om cookies kan rettes til: <a href="mailto:kontakt@meriluma.no">kontakt@meriluma.no</a></p>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>© MeriLuma</span> · 
+      <a href="/personvern.html">Personvern</a> · 
+      <a href="/disclaimer.html">Ansvarsfraskrivelse</a> · 
+      <a href="/vilkar.html">Vilkår</a> ·
+      <a href="/cookies.html">Cookies</a>
+    </div>
+  </footer>
+</body>
+</html>
