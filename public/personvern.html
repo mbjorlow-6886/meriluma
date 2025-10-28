@@ -34,19 +34,9 @@
   </style>
 </head>
 <body>
-  <header>
-    <div class="wrap">
-      <nav>
-        <a href="/" >Forside</a>
-        <a href="/meditasjon.html">Meditasjon &amp; lyd</a>
-        <a href="/kort.html">Kort &amp; symboler</a>
-        <a href="/yoga.html">Yoga</a>
-        <a href="/personvern.html" class="active">Personvern</a>
-        <a href="/disclaimer.html">Ansvarsfraskrivelse</a>
-        <a href="/vilkar.html">Vilkår</a>
-      </nav>
-    </div>
-  </header>
+  <!-- Global header -->
+  <div data-include="/partials/header.html"></div>
+
 
   <main class="wrap">
     <span class="tag">Skjelettside – klar for innhold</span>
@@ -139,13 +129,11 @@ Siste endring: <em>2025-11-01</em>.
     </section>
   </main>
 
-  <footer>
-    <div class="wrap">
-      <span>© MeriLuma</span> · 
-      <a href="/personvern.html">Personvern</a> · 
-      <a href="/disclaimer.html">Ansvarsfraskrivelse</a> · 
-      <a href="/vilkar.html">Vilkår</a>
-    </div>
-  </footer>
+  <!-- Global footer -->
+  <div data-include="/partials/footer.html"></div>
+  
+  <!-- Inkluder-skript (må være til slutt) -->
+  <script defer src="/assets/include.js"></script>
+  <script defer src="/assets/header.js"></script>
 </body>
 </html>
