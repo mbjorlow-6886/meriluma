@@ -1,4 +1,4 @@
-/* Footer – MeriLuma standard (global) */
+/* Footer – MeriLuma standard (to-kolonne) */
 .site-footer {
   border-top: 1px solid #eee;
   background: #fff;
@@ -8,10 +8,9 @@
 .site-footer .footer-wrap {
   max-width: 960px;
   margin: 0 auto;
-  padding: 18px 20px 28px;
+  padding: 20px;
   display: grid;
-  gap: 8px;
-  align-items: center;
+  gap: 10px;
 }
 .site-footer .brand {
   font-weight: 600;
@@ -21,8 +20,8 @@
 .site-footer .footer-nav {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
-  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
 }
 .site-footer .footer-nav a {
   color: #666;
@@ -35,8 +34,32 @@
 }
 .site-footer .legal {
   color: #888;
+  line-height: 1.5;
 }
+
+/* To-kolonne layout */
+.site-footer.two-col .footer-wrap {
+  grid-template-columns: 1fr;
+}
+.site-footer.two-col .col {
+  display: grid;
+  gap: 6px;
+}
+@media (min-width: 720px) {
+  .site-footer.two-col .footer-wrap {
+    grid-template-columns: 1fr 1fr;
+  }
+  .site-footer.two-col .col.right {
+    justify-items: end;
+    text-align: right;
+  }
+}
+
+/* Mobiljustering */
 @media (max-width: 640px) {
-  .site-footer .footer-wrap { gap: 10px; }
-  .site-footer .footer-nav { gap: 10px; }
+  .site-footer .footer-wrap { gap: 12px; }
+  .site-footer .footer-nav {
+    justify-content: flex-start;
+    gap: 10px;
+  }
 }
