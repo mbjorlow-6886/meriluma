@@ -1,25 +1,29 @@
-<footer class="site-footer" role="contentinfo">
+<footer class="site-footer two-col" role="contentinfo">
   <div class="footer-wrap">
-    <a class="brand" href="/">MeriLuma</a>
+    <div class="col left">
+      <a class="brand" href="/">MeriLuma</a>
+      <small class="legal">
+        © <span id="ml-year"></span> MeriLuma – Instruktør Marianne Bjørløw.<br>
+        Alle rettigheter reservert.
+      </small>
+    </div>
 
-    <nav class="footer-nav" aria-label="Juridiske lenker">
-      <a href="/personvern.html">Personvern</a>
-      <span aria-hidden="true">·</span>
-      <a href="/cookies.html">Cookies</a>
-      <span aria-hidden="true">·</span>
-      <a href="/disclaimer.html">Ansvarsfraskrivelse</a>
-      <span aria-hidden="true">·</span>
-      <a href="/vilkar.html">Vilkår</a>
-      <span aria-hidden="true">·</span>
-      <a href="/kontakt.html">Kontakt</a>
-    </nav>
-
-    <small class="legal">
-      © <span id="ml-year"></span> MeriLuma – Instruktør Marianne Bjørløw. Alle rettigheter reservert.
-    </small>
+    <div class="col right">
+      <nav class="footer-nav" aria-label="Juridiske lenker">
+        <a href="/personvern.html">Personvern</a>
+        <a href="/cookies.html">Cookies</a>
+        <a href="/disclaimer.html">Ansvarsfraskrivelse</a>
+        <a href="/vilkar.html">Vilkår</a>
+        <a href="/kontakt.html">Kontakt</a>
+      </nav>
+    </div>
   </div>
 
   <script>
-    (function(){ try { document.getElementById('ml-year').textContent = new Date().getFullYear(); } catch(e){} })();
+    (function(){
+      try {
+        document.getElementById('ml-year').textContent = new Date().getFullYear();
+      } catch(e){}
+    })();
   </script>
 </footer>
