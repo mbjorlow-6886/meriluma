@@ -1,21 +1,43 @@
-<header class="site-header" role="banner">
-  <div class="header-wrap">
-    <a href="/" class="brand" aria-label="MeriLuma – Hjem">
-      <img src="/apple-touch-icon.png" alt="" class="brand-mark" width="28" height="28" />
-      <span class="brand-name">MeriLuma</span>
-    </a>
+<script>
+// ========== Global Header Logic (MeriLuma) ==========
+(function(){
+  const tryInit = () => {
+    const header = document.querySelector('.site-header');
+    const nav = document.getElementById('primary-nav');
+    const toggle = document.querySelector('.nav-toggle');
+    if (!header || !nav || !toggle) return false;
 
-    <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Meny">
-      <span class="bar"></span><span class="bar"></span><span class="bar"></span>
-    </button>
+    // Unngå dobbel binding:
+    if (!toggle.dataset.bound) {
+      toggle.addEventListener('click', () => {
+        const open = nav.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', String(open));
+      });
+      toggle.dataset.bound = '1';
+    }
 
-    <nav id="primary-nav" class="primary-nav" aria-label="Hovedmeny">
-      <a href="/" data-match="/">Forside</a>
-      <a href="/meditasjon.html" data-match="/meditasjon">Meditasjon &amp; lyd</a>
-      <a href="/kort.html" data-match="/kort">Kort &amp; symboler</a>
-      <a href="/yoga.html" data-match="/yoga">Yoga</a>
-      <a href="/om.html" data-match="/om">Om</a>
-      <a href="/kontakt.html" data-match="/kontakt">Kontakt</a>
-    </nav>
-  </div>
-</header>
+    // Aktiv lenke (markerer siden du står på)
+    const path = location.pathname.replace(/index\.html$/, '').toLowerCase();
+    document.querySelectorAll('#primary-nav a[data-match]').forEach(a => {
+      const match = a.getAttribute('data-match').toLowerCase();
+      if (path === '/' && match === '/') a.classList.add('active');
+      else if (path.startsWith(match) && match !== '/') a.classList.add('active');
+    });
+
+    // Legg til skygge ved scroll
+    const onScroll = () => {
+      if (window.scrollY > 4) header.classList.add('scrolled');
+      else header.classList.remove('scrolled');
+    };
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return true;
+  };
+
+  if (tryInit()) return;
+
+  document.addEventListener('DOMContentLoaded', tryInit);
+  const mo = new MutationObserver(() => { if (tryInit()) mo.disconnect(); });
+  mo.observe(document.documentElement, { childList: true, subtree: true });
+})();
+</script>
