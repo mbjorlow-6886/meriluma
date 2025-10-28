@@ -4,48 +4,60 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Ansvarsfraskrivelse – MeriLuma</title>
-  <meta name="description" content="Ansvarsfraskrivelse for MeriLuma.no">
+  <meta name="description" content="Vilkår for bruk for MeriLuma.no">
   <meta name="robots" content="noindex,nofollow">
-  <link rel="icon" type="image/x-icon" href="/favicon.ico?v=2">
-  <link rel="shortcut icon" href="/favicon.ico?v=2">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=2">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=2">
-  <link rel="icon" type="image/png" href="/favicon.png?v=2">
-  <link rel="icon" type="image/webp" href="/favicon.webp?v=2">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="manifest" href="/manifest.json">
-  <meta name="msapplication-config" content="/browserconfig.xml">
   <meta name="theme-color" content="#ffffff">
+
+  <!-- Globale stiler -->
+  <link rel="stylesheet" href="/assets/header.css">
+  <link rel="stylesheet" href="/assets/footer.css">
+
   <style>
     :root { --accent:#f7a07a; --fg:#222; --bg:#fff; --muted:#666; }
-    *{box-sizing:border-box}
-    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif; margin:0; color:var(--fg); background:var(--bg);}
-    header{padding:24px 20px; border-bottom:1px solid #eee;}
-    .wrap{max-width:960px; margin:0 auto; padding:0 20px;}
-    nav a{margin-right:16px; text-decoration:none; color:var(--muted);}
-    nav a.active{color:var(--fg); font-weight:600;}
-    h1{font-size:32px; margin:24px 0 8px}
-    .tag{display:inline-block; background:#fff3ed; color:#b6532d; padding:6px 10px; border-radius:999px; font-size:12px; margin-bottom:12px;}
-    main{padding:28px 0 60px;}
-    section{margin:24px 0; padding:16px; background:#fafafa; border:1px dashed #e8e8e8; border-radius:12px;}
-    section .todo{color:#b6532d; font-weight:600;}
-    footer{border-top:1px solid #eee; padding:20px 0; color:var(--muted); font-size:14px;}
-    footer a{color:var(--muted); text-decoration:none; margin-right:10px;}
+    body {
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      margin: 0;
+      color: var(--fg);
+      background: var(--bg);
+    }
+    main {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 60px 20px 100px;
+      line-height: 1.6;
+    }
+    h1 {
+      font-size: 32px;
+      margin: 24px 0 20px;
+    }
+    h2 {
+      font-size: 20px;
+      margin: 32px 0 12px;
+    }
+    p { margin-bottom: 16px; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .tag {
+      display: inline-block;
+      background: #fff3ed;
+      color: #b6532d;
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      margin-bottom: 16px;
+    }
   </style>
 </head>
+
 <body>
-  <header>
-    <div class="wrap">
-      <nav>
-        <a href="/" >Forside</a>
-        <a href="/meditasjon.html">Meditasjon &amp; lyd</a>
-        <a href="/kort.html">Kort &amp; symboler</a>
-        <a href="/yoga.html">Yoga</a>
-        <a href="/personvern.html">Personvern</a>
-        <a href="/disclaimer.html" class="active">Ansvarsfraskrivelse</a>
-        <a href="/vilkar.html">Vilkår</a>
-      </nav>
-    </div>
-  </header>
+  <!-- Global header -->
+  <div data-include="/partials/header.html"></div>
 
   <main class="wrap">
     <span class="tag">Skjelettside – klar for innhold</span>
@@ -85,13 +97,11 @@ Denne ansvarsfraskrivelsen kan oppdateres ved behov.
 Siste oppdatering: <em>skriv inn dato når du publiserer</em>.</p>
   </main>
 
-  <footer>
-    <div class="wrap">
-      <span>© MeriLuma</span>  ·  
-      <a href="/personvern.html">Personvern</a> ·  
-      <a href="/disclaimer.html">Ansvarsfraskrivelse</a> ·  
-      <a href="/vilkar.html">Vilkår</a>
-    </div>
-  </footer>
+  <!-- Global footer -->
+  <div data-include="/partials/footer.html"></div>
+
+  <!-- Skript -->
+  <script defer src="/assets/include.js"></script>
+  <script defer src="/assets/header.js"></script>
 </body>
 </html>
