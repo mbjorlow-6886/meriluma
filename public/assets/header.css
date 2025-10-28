@@ -1,0 +1,105 @@
+/* ========== Global Header (MeriLuma) ========== */
+:root {
+  --ml-accent: #f7a07a;
+  --ml-fg: #222;
+  --ml-muted: #666;
+  --ml-bg: #fff;
+  --ml-border: #eee;
+}
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: var(--ml-bg);
+  border-bottom: 1px solid var(--ml-border);
+  box-shadow: 0 0 0 rgba(0,0,0,0);
+  transition: box-shadow .2s ease;
+}
+.site-header.scrolled {
+  box-shadow: 0 6px 20px rgba(0,0,0,.06);
+}
+.header-wrap {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 12px 20px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 12px;
+}
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--ml-fg);
+  font-weight: 600;
+  letter-spacing: .2px;
+}
+.brand-mark {
+  border-radius: 8px;
+  display: block;
+}
+.brand-name { font-size: 18px; }
+
+/* Nav */
+.primary-nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 18px;
+}
+.primary-nav a {
+  text-decoration: none;
+  color: var(--ml-muted);
+  padding: 8px 6px;
+  border-radius: 10px;
+  transition: background .15s ease, color .15s ease;
+}
+.primary-nav a:hover,
+.primary-nav a:focus {
+  color: var(--ml-fg);
+  background: #fafafa;
+  outline: none;
+}
+.primary-nav a.active {
+  color: var(--ml-fg);
+  background: #fff3ed;
+}
+
+/* Mobile */
+.nav-toggle {
+  display: none;
+  width: 42px; height: 38px;
+  border: 1px solid var(--ml-border);
+  border-radius: 10px;
+  background: var(--ml-bg);
+  align-items: center; justify-content: center;
+  gap: 3px; padding: 6px;
+}
+.nav-toggle .bar {
+  display: block;
+  width: 22px; height: 2px;
+  background: var(--ml-fg);
+  border-radius: 2px;
+}
+@media (max-width: 860px) {
+  .nav-toggle { display: inline-flex; justify-self: end; }
+  .primary-nav {
+    position: fixed;
+    inset: 64px 0 auto 0;
+    background: var(--ml-bg);
+    border-top: 1px solid var(--ml-border);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    padding: 8px 20px 16px;
+  }
+  .primary-nav.open { display: flex; }
+  .primary-nav a {
+    width: 100%;
+    padding: 12px 8px;
+    border-radius: 8px;
+  }
+}
