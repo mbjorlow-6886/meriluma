@@ -125,28 +125,15 @@
       <div class="mt-4">
         <a class="text-slate-800 underline decoration-2 underline-offset-4" href="mailto:hei@meriluma.no">hei@meriluma.no</a>
       </div>
-    </section>
+    </section> <!-- Slutt på Kontakt-seksjonen -->
 
-    <!-- Footer (enkelt inntil global variant) -->
-    <footer class="max-w-6xl mx-auto px-4 py-10 text-sm text-slate-500">
-      <div class="border-t border-slate-200 pt-6 flex flex-col sm:flex-row gap-3 sm:items-center sm:justify-between">
-        <p>© <span id="year"></span> MeriLuma – Marianne Bjørløw</p>
-        <nav class="flex gap-5">
-          <a href="/personvern.html" class="hover:underline">Personvern</a>
-          <a href="/disclaimer.html" class="hover:underline">Ansvarsfraskrivelse</a>
-          <a href="/vilkar.html" class="hover:underline">Vilkår</a>
-          <a href="/cookies.html" class="hover:underline">Cookies</a>
-          <a href="#kontakt" class="hover:underline">Kontakt</a>
-        </nav>
-      </div>
-    </footer>
+    <!-- Global footer -->
+    <div data-include="/partials/footer.html"></div>
+    <link rel="stylesheet" href="/assets/footer.css">
 
-    <!-- JS: global header + inkluder + årstall -->
+    <!-- JS: global header + inkluder -->
     <script defer src="/assets/header.js"></script>
     <script defer src="/assets/include.js"></script>
-    <script>
-      document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
   </body>
 </html>
 
