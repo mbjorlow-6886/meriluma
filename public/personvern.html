@@ -7,131 +7,131 @@
   <meta name="description" content="Personvernerklæring for MeriLuma.no">
   <!-- Midlertidig, fjern når siden er ferdig -->
   <meta name="robots" content="noindex,nofollow">
+
+  <!-- Favicons -->
   <link rel="icon" type="image/x-icon" href="/favicon.ico?v=2">
   <link rel="shortcut icon" href="/favicon.ico?v=2">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=2">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=2">
   <link rel="icon" type="image/png" href="/favicon.png?v=2">
   <link rel="icon" type="image/webp" href="/favicon.webp?v=2">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="manifest" href="/manifest.json">
   <meta name="msapplication-config" content="/browserconfig.xml">
   <meta name="theme-color" content="#ffffff">
+
+  <!-- Globale stiler for header/footer -->
+  <link rel="stylesheet" href="/assets/header.css">
+  <link rel="stylesheet" href="/assets/footer.css">
+
   <style>
     :root { --accent:#f7a07a; --fg:#222; --bg:#fff; --muted:#666; }
     *{box-sizing:border-box}
-    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif; margin:0; color:var(--fg); background:var(--bg);}
-    header{padding:24px 20px; border-bottom:1px solid #eee;}
-    .wrap{max-width:960px; margin:0 auto; padding:0 20px;}
-    nav a{margin-right:16px; text-decoration:none; color:var(--muted);}
-    nav a.active{color:var(--fg); font-weight:600;}
-    h1{font-size:32px; margin:24px 0 8px}
-    .tag{display:inline-block; background:#fff3ed; color:#b6532d; padding:6px 10px; border-radius:999px; font-size:12px; margin-bottom:12px;}
-    main{padding:28px 0 60px;}
-    section{margin:24px 0; padding:16px; background:#fafafa; border:1px dashed #e8e8e8; border-radius:12px;}
-    section .todo{color:#b6532d; font-weight:600;}
-    footer{border-top:1px solid #eee; padding:20px 0; color:var(--muted); font-size:14px;}
-    footer a{color:var(--muted); text-decoration:none; margin-right:10px;}
+    body{
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      margin:0; color:var(--fg); background:var(--bg);
+    }
+    main{max-width:960px; margin:0 auto; padding:60px 20px 100px; line-height:1.6;}
+    h1{font-size:32px; margin:24px 0 16px}
+    h2{font-size:20px; margin:28px 0 10px}
+    .tag{
+      display:inline-block; background:#fff3ed; color:#b6532d;
+      padding:6px 10px; border-radius:999px; font-size:12px; margin-bottom:16px;
+    }
+    ul{margin:8px 0 16px 20px}
+    a{color:var(--accent); text-decoration:none}
+    a:hover{text-decoration:underline}
+    /* fjernet gamle header/footer regler – global partial tar seg av det */
   </style>
 </head>
+
 <body>
   <!-- Global header -->
   <div data-include="/partials/header.html"></div>
 
-
-  <main class="wrap">
+  <main>
     <span class="tag">Skjelettside – klar for innhold</span>
     <h1>Personvernerklæring</h1>
-    <p><p><strong>1. Behandlingsansvarlig</strong><br>
-Instruktør <strong>Marianne Bjørløw</strong> er behandlingsansvarlig for personopplysninger som samles inn på MeriLuma.no.<br>
-Kontakt: <a href="mailto:kontakt@meriluma.no">kontakt@meriluma.no</a></p>
 
-<p><strong>2. Formålet med innsamling av personopplysninger</strong><br>
-Jeg samler inn personopplysninger for å kunne:
-<ul>
-  <li>besvare henvendelser fra deg via e-post eller kontaktskjema,</li>
-  <li>tilby og forbedre mine tjenester innen yoga, meditasjon og lydarbeid,</li>
-  <li>administrere nyhetsbrev (dersom du har meldt deg på),</li>
-  <li>analysere bruk av nettsiden for å forbedre opplevelsen.</li>
-</ul>
+    <p><strong>1. Behandlingsansvarlig</strong><br>
+    Instruktør <strong>Marianne Bjørløw</strong> er behandlingsansvarlig for personopplysninger som samles inn på MeriLuma.no.<br>
+    Kontakt: <a href="mailto:kontakt@meriluma.no">kontakt@meriluma.no</a></p>
 
-<p><strong>3. Hvilke opplysninger som samles inn</strong><br>
-<ul>
-  <li><strong>Ved kontakt:</strong> navn og e-postadresse du selv oppgir.</li>
-  <li><strong>Ved kjøp/påmelding:</strong> nødvendige kontakt- og betalingsopplysninger (hvis aktuelt).</li>
-  <li><strong>Via nettstedet:</strong> anonyme tekniske data (f.eks. IP-adresse, nettlesertype og besøksstatistikk).</li>
-</ul>
-Disse opplysningene brukes kun til drift, sikkerhet og forbedring av tjenesten.
-</p>
+    <h2>2. Formål med innsamling</h2>
+    <p>Jeg samler inn personopplysninger for å kunne:</p>
+    <ul>
+      <li>besvare henvendelser fra deg via e-post eller kontaktskjema,</li>
+      <li>tilby og forbedre tjenester innen yoga, meditasjon og lydarbeid,</li>
+      <li>administrere nyhetsbrev (dersom du har meldt deg på),</li>
+      <li>analysere bruk av nettsiden for å forbedre opplevelsen.</li>
+    </ul>
 
-<p><strong>4. Bruk av informasjonskapsler (cookies)</strong><br>
-Nettsiden bruker informasjonskapsler (cookies) for grunnleggende funksjonalitet og anonym statistikk.
-Du kan når som helst slette eller blokkere cookies i nettleseren din.
-</p>
+    <h2>3. Hvilke opplysninger som samles inn</h2>
+    <ul>
+      <li><strong>Ved kontakt:</strong> navn og e-postadresse du selv oppgir.</li>
+      <li><strong>Ved kjøp/påmelding:</strong> nødvendige kontakt- og betalingsopplysninger (hvis aktuelt).</li>
+      <li><strong>Via nettstedet:</strong> anonyme tekniske data (f.eks. IP-adresse, nettlesertype og besøksstatistikk).</li>
+    </ul>
+    <p>Disse opplysningene brukes kun til drift, sikkerhet og forbedring av tjenesten.</p>
 
-<p><strong>5. Behandlingsgrunnlag</strong><br>
-Behandlingen av personopplysninger skjer på bakgrunn av:
-<ul>
-  <li><em>Samtykke</em> (f.eks. ved nyhetsbrev eller kontakt),</li>
-  <li><em>Avtale</em> (f.eks. ved bestilling av tjenester),</li>
-  <li><em>Berettiget interesse</em> (f.eks. for å sikre og forbedre nettsiden).</li>
-</ul>
-</p>
+    <h2>4. Bruk av informasjonskapsler (cookies)</h2>
+    <p>Nettsiden bruker informasjonskapsler (cookies) for grunnleggende funksjonalitet og anonym statistikk.
+    Du kan når som helst slette eller blokkere cookies i nettleseren din.</p>
 
-<p><strong>6. Lagring og sletting</strong><br>
-Personopplysninger lagres så lenge det er nødvendig for formålet de ble samlet inn for.
-Du kan når som helst be om innsyn, retting eller sletting av dine opplysninger.
-</p>
+    <h2>5. Behandlingsgrunnlag</h2>
+    <p>Behandlingen skjer på bakgrunn av:</p>
+    <ul>
+      <li><em>Samtykke</em> (f.eks. ved nyhetsbrev eller kontakt),</li>
+      <li><em>Avtale</em> (f.eks. ved bestilling av tjenester),</li>
+      <li><em>Berettiget interesse</em> (f.eks. for å sikre og forbedre nettsiden).</li>
+    </ul>
 
-<p><strong>7. Deling av data</strong><br>
-Jeg deler ikke personopplysninger med tredjeparter med mindre det er nødvendig for drift av tjenesten.
-Mulige databehandlere kan være:
-<ul>
-  <li><strong>Vercel</strong> (hosting av nettstedet),</li>
-  <li><strong>Google</strong> (e-post, analyse),</li>
-  <li><strong>Mailchimp eller tilsvarende</strong> (nyhetsbrev),</li>
-  <li><strong>Stripe / Vipps</strong> (betaling).</li>
-</ul>
-Alle databehandlere er forpliktet til å håndtere informasjon i tråd med GDPR.
-</p>
+    <h2>6. Lagring og sletting</h2>
+    <p>Personopplysninger lagres så lenge det er nødvendig for formålet de ble samlet inn for.
+    Du kan når som helst be om innsyn, retting eller sletting av dine opplysninger.</p>
 
-<p><strong>8. Dine rettigheter</strong><br>
-Du har rett til å:
-<ul>
-  <li>be om innsyn i hvilke opplysninger som er lagret,</li>
-  <li>kreve retting eller sletting,</li>
-  <li>trekke tilbake samtykke,</li>
-  <li>klage til Datatilsynet dersom du mener at dine rettigheter ikke ivaretas.</li>
-</ul>
-</p>
+    <h2>7. Deling av data</h2>
+    <p>Jeg deler ikke personopplysninger med tredjeparter med mindre det er nødvendig for drift av tjenesten.
+    Mulige databehandlere kan være:</p>
+    <ul>
+      <li><strong>Vercel</strong> (hosting av nettstedet),</li>
+      <li><strong>Google</strong> (e-post, analyse),</li>
+      <li><strong>Mailchimp eller tilsvarende</strong> (nyhetsbrev),</li>
+      <li><strong>Stripe / Vipps</strong> (betaling).</li>
+    </ul>
+    <p>Alle databehandlere er forpliktet til å håndtere informasjon i tråd med GDPR.</p>
 
-<p><strong>9. Kontaktinformasjon</strong><br>
-For spørsmål om personvern, kontakt:
-<br>📧 <a href="mailto:kontakt@meriluma.no">kontakt@meriluma.no</a>
-<br>📍 Instruktør Marianne Bjørløw – MeriLuma
-</p>
+    <h2>8. Dine rettigheter</h2>
+    <p>Du har rett til å:</p>
+    <ul>
+      <li>be om innsyn i hvilke opplysninger som er lagret,</li>
+      <li>kreve retting eller sletting,</li>
+      <li>trekke tilbake samtykke,</li>
+      <li>klage til Datatilsynet dersom du mener at dine rettigheter ikke ivaretas.</li>
+    </ul>
 
-<p><strong>10. Endringer</strong><br>
-Denne personvernerklæringen kan oppdateres ved behov.  
-Siste endring: <em>2025-11-01</em>.
-</p>
+    <h2>9. Kontaktinformasjon</h2>
+    <p>For spørsmål om personvern, kontakt:
+    <br>📧 <a href="mailto:kontakt@meriluma.no">kontakt@meriluma.no</a>
+    <br>📍 Instruktør Marianne Bjørløw – MeriLuma</p>
 
+    <h2>10. Endringer</h2>
+    <p>Denne personvernerklæringen kan oppdateres ved behov.
+    Siste endring: <em>2025-11-01</em>.</p>
+
+    <!-- valgfritt arbeidsnotat mens du bygger: -->
     <section>
-      <p class="todo">TODO:</p>
+      <p class="tag">TODO (internt): oppdater ved oppstart av nyhetsbrev/betaling</p>
       <ul>
-        <li>Behandlingsansvarlig (navn/epost)</li>
-        <li>Formål og grunnlag (GDPR) – nyhetsbrev, kontakt, booking, analyse</li>
-        <li>Hvilke data som samles (navn, e-post, cookies, IP osv.)</li>
-        <li>Lagring, sikkerhet og sletting</li>
-        <li>Databehandlere (Vercel, evt. Mailchimp, Google, Spotify m.fl.)</li>
-        <li>Rettigheter (innsyn, retting, sletting, klage)</li>
-        <li>Kontaktinformasjon</li>
+        <li>Legg inn endelig liste over databehandlere når valgt</li>
+        <li>Lenk til egen Cookies-side når klar</li>
       </ul>
     </section>
   </main>
 
   <!-- Global footer -->
   <div data-include="/partials/footer.html"></div>
-  
+
   <!-- Inkluder-skript (må være til slutt) -->
   <script defer src="/assets/include.js"></script>
   <script defer src="/assets/header.js"></script>
