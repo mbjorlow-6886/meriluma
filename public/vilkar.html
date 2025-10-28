@@ -30,19 +30,8 @@
   </style>
 </head>
 <body>
-  <header>
-    <div class="wrap">
-      <nav>
-        <a href="/" >Forside</a>
-        <a href="/meditasjon.html">Meditasjon &amp; lyd</a>
-        <a href="/kort.html">Kort &amp; symboler</a>
-        <a href="/yoga.html">Yoga</a>
-        <a href="/personvern.html">Personvern</a>
-        <a href="/disclaimer.html">Ansvarsfraskrivelse</a>
-        <a href="/vilkar.html" class="active">Vilkår</a>
-      </nav>
-    </div>
-  </header>
+<!-- Global header -->
+<div data-include="/partials/header.html"></div>
 
   <main class="wrap">
     <span class="tag">Skjelettside – klar for innhold</span>
@@ -88,21 +77,11 @@
     </section>
   </main>
 
-      <footer class="max-w-6xl mx-auto px-4 py-10 text-sm text-slate-500">
-      <div class="border-t border-slate-200 pt-6 flex flex-col sm:flex-row gap-3 sm:items-center sm:justify-between">
-        <p>© <span id="year"></span> MeriLuma – Marianne Bjørløw</p>
-        <nav class="flex gap-5">
-          <a href="/personvern.html" class="hover:underline">Personvern</a>
-          <a href="/disclaimer.html" class="hover:underline">Ansvarsfraskrivelse</a>
-          <a href="/vilkar.html" class="hover:underline>Vilkår</a>
-          <a href="#" class="hover:underline">Cookies</a>
-          <a href="#kontakt" class="hover:underline">Kontakt</a>
-        </nav>
-      </div>
-    </footer>
-            
-  <footer>
-    </div>
-  </footer>
+  <!-- Global footer -->
+  <div data-include="/partials/footer.html"></div>
+
+  <!-- Inkluder-skript (må være til slutt) -->
+  <script defer src="/assets/include.js"></script>
+  <script defer src="/assets/header.js"></script>
 </body>
 </html>
