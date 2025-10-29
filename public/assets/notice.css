@@ -1,0 +1,50 @@
+/* === MeriLuma – global notice/banner === */
+
+.site-banner {
+  background: #fff7f5;
+  border-bottom: 1px solid #f1e6e2;
+  color: #5a3f37;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+}
+
+.site-banner__inner {
+  max-width: 72rem;          /* 1152px, matcher header/footer */
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+}
+
+.site-banner__dot {
+  width: 10px; height: 10px; border-radius: 999px;
+  background: #f7a07a; box-shadow: 0 0 0 4px rgba(247,160,122,0.18);
+  display: inline-block;
+}
+
+.site-banner__text {
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.site-banner__close {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: #8a6d65;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 4px 6px;
+  border-radius: 8px;
+}
+.site-banner__close:hover { background: rgba(0,0,0,0.04); }
+
+@media (max-width: 640px) {
+  .site-banner__inner {
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+  }
+  .site-banner__dot { display: none; }
+  .site-banner__text { grid-column: 1 / -1; }
+}
