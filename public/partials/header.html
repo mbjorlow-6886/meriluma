@@ -1,20 +1,21 @@
-<header class="site-header fixed top-0 left-0 w-full bg-white/80 backdrop-blur border-b border-slate-200 z-50 transition-shadow">
-  <div class="max-w-6xl mx-auto flex items-center justify-between px-4 py-4">
-    <a href="/" class="flex items-center gap-3" aria-label="MeriLuma hjem">
-      <div class="text-3xl gold font-semibold tracking-tight">∞</div>
-      <span class="text-xl font-medium tracking-tight">MeriLuma</span>
+<header class="site-header">
+  <div class="max-w-6xl">
+    <a href="/" class="logo-link" aria-label="MeriLuma hjem">
+      <div class="logo-symbol">∞</div>
+      <span class="logo-text">MeriLuma</span>
     </a>
 
-    <!-- Hamburger button (vises kun på mobil) -->
-    <button class="nav-toggle sm:hidden p-2" aria-label="Meny" aria-expanded="false">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-          d="M4 6h16M4 12h16M4 18h16" />
+    <!-- Hamburger (mobil) -->
+    <button class="nav-toggle" aria-label="Meny" aria-expanded="false">
+      <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="4" y1="6" x2="22" y2="6"></line>
+        <line x1="4" y1="12" x2="22" y2="12"></line>
+        <line x1="4" y1="18" x2="22" y2="18"></line>
       </svg>
     </button>
 
     <!-- Navigasjon -->
-      <nav id="primary-nav" class="nav-links">
+    <nav id="primary-nav" class="nav-links">
       <a href="/" data-match="/">Hjem</a>
       <a href="/yoga.html" data-match="/yoga">Yoga</a>
       <a href="/meditasjon.html" data-match="/meditasjon">Meditasjon</a>
@@ -24,7 +25,7 @@
     </nav>
   </div>
 
-  <!-- Script for menylogikk -->
+  <!-- Script for logikk -->
   <script>
   (function(){
     const tryInit = () => {
@@ -33,18 +34,16 @@
       const toggle = document.querySelector('.nav-toggle');
       if (!header || !nav || !toggle) return false;
 
-      // Åpne/lukke meny
+      // Åpne/lukke meny på mobil
       if (!toggle.dataset.bound) {
         toggle.addEventListener('click', () => {
           const open = nav.classList.toggle('open');
           toggle.setAttribute('aria-expanded', String(open));
-          if (open) nav.classList.add('block');
-          else nav.classList.remove('block');
         });
         toggle.dataset.bound = '1';
       }
 
-      // Merk aktiv side
+      // Marker aktiv side
       const path = location.pathname.replace(/index\.html$/, '').toLowerCase();
       document.querySelectorAll('#primary-nav a[data-match]').forEach(a => {
         const match = a.getAttribute('data-match').toLowerCase();
