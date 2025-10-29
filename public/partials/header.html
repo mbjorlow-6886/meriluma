@@ -1,43 +1,72 @@
-<script>
-// ========== Global Header Logic (MeriLuma) ==========
-(function(){
-  const tryInit = () => {
-    const header = document.querySelector('.site-header');
-    const nav = document.getElementById('primary-nav');
-    const toggle = document.querySelector('.nav-toggle');
-    if (!header || !nav || !toggle) return false;
+<header class="site-header fixed top-0 left-0 w-full bg-white/80 backdrop-blur border-b border-slate-200 z-50 transition-shadow">
+  <div class="max-w-6xl mx-auto flex items-center justify-between px-4 py-4">
+    <a href="/" class="flex items-center gap-3" aria-label="MeriLuma hjem">
+      <div class="text-3xl gold font-semibold tracking-tight">∞</div>
+      <span class="text-xl font-medium tracking-tight">MeriLuma</span>
+    </a>
 
-    // Unngå dobbel binding:
-    if (!toggle.dataset.bound) {
-      toggle.addEventListener('click', () => {
-        const open = nav.classList.toggle('open');
-        toggle.setAttribute('aria-expanded', String(open));
+    <!-- Hamburger button (vises kun på mobil) -->
+    <button class="nav-toggle sm:hidden p-2" aria-label="Meny" aria-expanded="false">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+
+    <!-- Navigasjon -->
+    <nav id="primary-nav" class="hidden sm:flex gap-6 text-sm font-medium">
+      <a href="/" data-match="/">Hjem</a>
+      <a href="/yoga.html" data-match="/yoga">Yoga</a>
+      <a href="/meditasjon.html" data-match="/meditasjon">Meditasjon</a>
+      <a href="/kort.html" data-match="/kort">Kort</a>
+      <a href="/om.html" data-match="/om">Om</a>
+      <a href="/kontakt.html" data-match="/kontakt">Kontakt</a>
+    </nav>
+  </div>
+
+  <!-- Script for menylogikk -->
+  <script>
+  (function(){
+    const tryInit = () => {
+      const header = document.querySelector('.site-header');
+      const nav = document.getElementById('primary-nav');
+      const toggle = document.querySelector('.nav-toggle');
+      if (!header || !nav || !toggle) return false;
+
+      // Åpne/lukke meny
+      if (!toggle.dataset.bound) {
+        toggle.addEventListener('click', () => {
+          const open = nav.classList.toggle('open');
+          toggle.setAttribute('aria-expanded', String(open));
+          if (open) nav.classList.add('block');
+          else nav.classList.remove('block');
+        });
+        toggle.dataset.bound = '1';
+      }
+
+      // Merk aktiv side
+      const path = location.pathname.replace(/index\.html$/, '').toLowerCase();
+      document.querySelectorAll('#primary-nav a[data-match]').forEach(a => {
+        const match = a.getAttribute('data-match').toLowerCase();
+        if (path === '/' && match === '/') a.classList.add('active');
+        else if (path.startsWith(match) && match !== '/') a.classList.add('active');
       });
-      toggle.dataset.bound = '1';
-    }
 
-    // Aktiv lenke (markerer siden du står på)
-    const path = location.pathname.replace(/index\.html$/, '').toLowerCase();
-    document.querySelectorAll('#primary-nav a[data-match]').forEach(a => {
-      const match = a.getAttribute('data-match').toLowerCase();
-      if (path === '/' && match === '/') a.classList.add('active');
-      else if (path.startsWith(match) && match !== '/') a.classList.add('active');
-    });
+      // Skygge ved scroll
+      const onScroll = () => {
+        if (window.scrollY > 4) header.classList.add('shadow');
+        else header.classList.remove('shadow');
+      };
+      onScroll();
+      window.addEventListener('scroll', onScroll, { passive: true });
 
-    // Legg til skygge ved scroll
-    const onScroll = () => {
-      if (window.scrollY > 4) header.classList.add('scrolled');
-      else header.classList.remove('scrolled');
+      return true;
     };
-    onScroll();
-    window.addEventListener('scroll', onScroll, { passive: true });
-    return true;
-  };
 
-  if (tryInit()) return;
-
-  document.addEventListener('DOMContentLoaded', tryInit);
-  const mo = new MutationObserver(() => { if (tryInit()) mo.disconnect(); });
-  mo.observe(document.documentElement, { childList: true, subtree: true });
-})();
-</script>
+    if (tryInit()) return;
+    document.addEventListener('DOMContentLoaded', tryInit);
+    const mo = new MutationObserver(() => { if (tryInit()) mo.disconnect(); });
+    mo.observe(document.documentElement, { childList: true, subtree: true });
+  })();
+  </script>
+</header>
