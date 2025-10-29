@@ -1,0 +1,36 @@
+<div class="site-banner" role="status" aria-live="polite" data-banner-id="ml-devnotice">
+  <div class="site-banner__inner">
+    <span class="site-banner__dot" aria-hidden="true"></span>
+    <span class="site-banner__text">
+      Nettsiden er under utvikling. Innhold oppdateres fortløpende. 🌿
+    </span>
+    <button class="site-banner__close" aria-label="Skjul meldingen" title="Skjul">✕</button>
+  </div>
+
+  <script>
+  (function(){
+    // Unik ID hvis du vil ha flere ulike bannere senere:
+    const root = document.currentScript.closest('.site-banner');
+    const id = root?.dataset?.bannerId || 'ml-banner';
+    const KEY = 'banner:' + id;
+
+    // Sjekk om den er skjult (innenfor 7 dager)
+    try {
+      const saved = JSON.parse(localStorage.getItem(KEY) || 'null');
+      if (saved && Date.now() - saved.time < 7*24*60*60*1000) {
+        root.style.display = 'none';
+        return;
+      }
+    } catch(e) {}
+
+    // Lukk-knapp
+    const btn = root.querySelector('.site-banner__close');
+    btn?.addEventListener('click', () => {
+      root.style.display = 'none';
+      try {
+        localStorage.setItem(KEY, JSON.stringify({ time: Date.now() }));
+      } catch(e) {}
+    });
+  })();
+  </script>
+</div>
