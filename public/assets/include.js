@@ -5,9 +5,14 @@
     const src = el.getAttribute('data-include');
     try {
       const res = await fetch(src, { cache: 'no-cache' });
-      if (!res.ok) continue;
+      if (!res.ok) {
+        console.error('Include failed:', src, res.status);
+        continue;
+      }
       const html = await res.text();
       el.outerHTML = html + '\n';
-    } catch(e){ /* noop */ }
+    } catch(e){
+      console.error('Include error:', src, e);
+    }
   }
 })();
