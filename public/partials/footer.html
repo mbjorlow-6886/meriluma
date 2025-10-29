@@ -1,29 +1,33 @@
-<footer class="site-footer two-col" role="contentinfo">
-  <div class="footer-wrap">
-    <div class="col left">
-      <a class="brand" href="/">MeriLuma</a>
-      <small class="legal">
-        © <span id="ml-year"></span> MeriLuma – Instruktør Marianne Bjørløw.<br>
-        Alle rettigheter reservert.
-      </small>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-left">
+      <a href="/" class="footer-logo">
+        <span class="footer-symbol">∞</span>
+        <span class="footer-name">MeriLuma</span>
+      </a>
+      <p class="footer-tagline">Pust. Nærvær. Klarhet.</p>
     </div>
 
-    <div class="col right">
-      <nav class="footer-nav" aria-label="Juridiske lenker">
-        <a href="/personvern.html">Personvern</a>
-        <a href="/cookies.html">Cookies</a>
-        <a href="/disclaimer.html">Ansvarsfraskrivelse</a>
-        <a href="/vilkar.html">Vilkår</a>
-        <a href="/kontakt.html">Kontakt</a>
-      </nav>
-    </div>
+    <nav class="footer-nav">
+      <a href="/yoga.html">Yoga</a>
+      <a href="/meditasjon.html">Meditasjon</a>
+      <a href="/kort.html">Kort</a>
+      <a href="/om.html">Om</a>
+      <a href="/kontakt.html">Kontakt</a>
+    </nav>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© <span id="year"></span> MeriLuma – Marianne Bjørløw</p>
+    <nav class="footer-legal">
+      <a href="/personvern.html">Personvern</a>
+      <a href="/disclaimer.html">Ansvarsfraskrivelse</a>
+      <a href="/vilkar.html">Vilkår</a>
+      <a href="/cookies.html">Cookies</a>
+    </nav>
   </div>
 
   <script>
-    (function(){
-      try {
-        document.getElementById('ml-year').textContent = new Date().getFullYear();
-      } catch(e){}
-    })();
+    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </footer>
