@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="no">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Takk for booking – MeriLuma</title>
+  <meta name="description" content="Takk for at du booket Meditasjons-PT. Her er hva som skjer videre – og hvordan du forbereder deg.">
+
+  <!-- Favicons (du har disse fra før) -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico?v=2">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=2">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=2">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/manifest.json">
+
+  <!-- Globale stiler -->
+  <link rel="stylesheet" href="/assets/header.css">
+  <link rel="stylesheet" href="/assets/footer.css">
+  <!-- <link rel="stylesheet" href="/assets/notice.css"> --> <!-- valgfritt hvis du vil vise banner -->
+
+  <style>
+    :root { --accent:#f7a07a; --fg:#222; --muted:#666; }
+    body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; color:var(--fg); background:#fff; }
+    main { max-width: 860px; margin: 0 auto; padding: 60px 20px 110px; line-height: 1.75; }
+    h1 { font-size: 34px; margin: 6px 0 10px; }
+    .lead { font-size: 18px; color:#444; }
+    .card {
+      margin-top: 22px; padding: 22px; border: 1px solid #eee; border-radius: 20px; background: #fff7f5;
+      box-shadow: 0 3px 12px rgba(0,0,0,.04);
+    }
+    .section { margin-top: 24px; padding: 18px; border: 1px dashed #eee; border-radius: 16px; background: #fff; }
+    .grid { display: grid; gap: 14px; }
+    @media (min-width: 700px){ .grid-2 { grid-template-columns: 1fr 1fr; } }
+    .ok {
+      width: 64px; height: 64px; border-radius: 999px; background: #eaf9f0; display: inline-flex; align-items:center; justify-content:center;
+      box-shadow: 0 2px 8px rgba(0,0,0,.06); margin-bottom: 10px;
+    }
+    .ok svg { width: 34px; height: 34px; stroke: #2fa365; }
+    .btn {
+      display:inline-block; padding:12px 18px; border-radius:16px; text-decoration:none;
+      background:#222; color:#fff; box-shadow: 0 2px 6px rgba(0,0,0,.1);
+    }
+    .btn.alt { background: #fff; color:#222; border:1px solid #ddd; }
+    .btn:hover { filter: brightness(1.06); }
+    ul { margin: 8px 0 0 20px; }
+    .muted { color: var(--muted); font-size: 14px; }
+    .spacer { height: 6px; }
+    .center { text-align: center; }
+  </style>
+</head>
+
+<body>
+  <!-- Global header -->
+  <div data-include="/partials/header.html"></div>
+
+  <!-- Global notice/banner (valgfritt) -->
+  <!-- <div data-include="/partials/notice.html"></div> -->
+
+  <main>
+    <div class="center">
+      <span class="ok" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+      <h1>Takk for booking!</h1>
+      <p class="lead">Din avtale for <strong>Meditasjons-PT</strong> er registrert. Du får bekreftelse på e-post fra Calendly.</p>
+    </div>
+
+    <div class="card">
+      <div class="grid grid-2">
+        <div>
+          <h3>Hva skjer nå?</h3>
+          <ul>
+            <li>Du har fått en e-post med alle detaljer (tid, lenke og kalender-fil).</li>
+            <li>Om noe må endres, kan du gjøre det via e-posten fra Calendly.</li>
+            <li>Jeg sender deg en kort påminnelse i forkant av timen.</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Forberedelse</h3>
+          <ul>
+            <li>Finn et rolig sted med godt nett.</li>
+            <li>Ha hodetelefoner tilgjengelig, om du har.</li>
+            <li>Ta gjerne med et glass vann – vi jobber rolig og klart.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>Trenger du å komme i kontakt?</h3>
+      <p>Send meg gjerne en e-post: <a href="mailto:hei@meriluma.no">hei@meriluma.no</a>.  
+      Jeg svarer som regel innen 1–2 virkedager.</p>
+      <div class="spacer"></div>
+      <p>
+        <a class="btn" href="/meditasjons-pt.html">Tilbake til Meditasjons-PT</a>
+        &nbsp;&nbsp;
+        <a class="btn alt" href="/">Gå til forsiden</a>
+      </p>
+      <p class="muted">Tips: Sjekk at bekreftelsen ikke havnet i “Spam/Promotions”.</p>
+    </div>
+  </main>
+
+  <!-- Global footer -->
+  <div data-include="/partials/footer.html"></div>
+
+  <!-- Inkluder-skript (må være til slutt) -->
+  <script defer src="/assets/include.js"></script>
+</body>
+</html>
